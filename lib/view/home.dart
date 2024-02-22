@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:signal_poc/data/model/activity_model.dart';
@@ -50,6 +52,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
       activitySignal.value = AsyncState.data(activity);
     }
+  }
+
+  @override
+  void initState() {
+    effect(() => log('Activity parameters changed: $activityParameters'));
+    super.initState();
   }
 
   void reset() {

@@ -1,3 +1,3 @@
 # signal_poc
 
-A new Flutter project.
+Trying out the Signals package
